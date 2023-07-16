@@ -12,8 +12,8 @@ class GestionAlumnosTest {
 
 	@Test
 	void testCrearAlumno() {
-		gestAlum.CrearAlumno(998, "Prueba", 8, "pr@pr.es");
-		List<Alumnos> listado = gestAlum.CrearAlumno(999, "Test", 9, "test@test.es");
+		gestAlum.crearAlumno(998, "Prueba", 8, "pr@pr.es");
+		List<Alumnos> listado = gestAlum.crearAlumno(999, "Test", 9, "test@test.es");
 
 		assertEquals(999, listado.get(listado.size() - 1).id, 0.000001);
 		assertEquals("Test", listado.get(listado.size() - 1).nombre);

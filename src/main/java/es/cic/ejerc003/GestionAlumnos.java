@@ -10,7 +10,7 @@ import java.util.List;
 
 public class GestionAlumnos {
 
-	public List<Alumnos> CrearAlumno(int id, String nombre, int nota, String contacto) {
+	public List<Alumnos> crearAlumno(int id, String nombre, int nota, String contacto) {
 
 		List<Alumnos> listado = obtenerDatos();
 
