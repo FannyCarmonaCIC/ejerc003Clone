@@ -11,11 +11,6 @@ class GestionAlumnosTest {
 	GestionAlumnos gestAlum = new GestionAlumnos();
 
 	@Test
-	void testObtenerDatos() {
-
-	}
-
-	@Test
 	void testCrearAlumno() {
 		gestAlum.CrearAlumno(998, "Prueba", 8, "pr@pr.es");
 		List<Alumnos> listado = gestAlum.CrearAlumno(999, "Test", 9, "test@test.es");
@@ -30,7 +25,7 @@ class GestionAlumnosTest {
 	void testEliminarAlumno() {
 		int id = 999; // Asigna valor a la variable id
 		boolean validacion = true; // Inicializa validación con el valor true
-		List<Alumnos> listado = gestAlum.EliminarAlumno(id); // listado = a la lista sin el alumno con id 999
+		List<Alumnos> listado = gestAlum.eliminarAlumno(id); // listado = a la lista sin el alumno con id 999
 
 		for (Alumnos l : listado) {
 			if (l.getId() == id) { // Si el id coincide con algún alumno de la lista, el alumno no se ha eliminado
@@ -47,12 +42,8 @@ class GestionAlumnosTest {
 			}
 		}
 		assertTrue(validacion); // Como el array está vacío, nunca encuentra el id 998, por lo que validacion nunca cambia a true
-		gestAlum.EliminarAlumno(id);
+		gestAlum.eliminarAlumno(id);
 	}
 
-	@Test
-	void testGuardarDatos() {
-
-	}
 
 }

@@ -12,17 +12,17 @@ public class GestionAlumnos {
 
 	public List<Alumnos> CrearAlumno(int id, String nombre, int nota, String contacto) {
 
-		List<Alumnos> listado = ObtenerDatos();
+		List<Alumnos> listado = obtenerDatos();
 
 		listado.add(new Alumnos(id, nombre, nota, contacto));
 
-		GuardarDatos(listado);
+		guardarDatos(listado);
 		return listado;
 	}
 
-	public List<Alumnos> EliminarAlumno(int id) {
+	public List<Alumnos> eliminarAlumno(int id) {
 
-		List<Alumnos> listado = ObtenerDatos();
+		List<Alumnos> listado = obtenerDatos();
 
 		for (Alumnos l : listado) {
 			if (l.getId() == id) {
@@ -31,11 +31,11 @@ public class GestionAlumnos {
 			}
 		}
 
-		GuardarDatos(listado);
+		guardarDatos(listado);
 		return listado;
 	}
 
-	public List<Alumnos> ObtenerDatos() {
+	public List<Alumnos> obtenerDatos() {
 
 		List<Alumnos> lista = new ArrayList<Alumnos>();
 
@@ -62,7 +62,7 @@ public class GestionAlumnos {
 
 	}
 
-	public void GuardarDatos(List<Alumnos> listado) {
+	public void guardarDatos(List<Alumnos> listado) {
 		try {
 
 			FileWriter fw = new FileWriter("/home/d/Desktop/Alumnos");
